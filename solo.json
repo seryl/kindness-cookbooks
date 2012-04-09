@@ -1,0 +1,16 @@
+{
+  "user": {
+    "shell": "zsh"
+  },
+  "run_list": [
+    "recipe[shell]",
+    "recipe[dotfiles]",
+    "recipe[dmg]",
+    "recipe[homebrew]",
+    "recipe[git]",
+    "recipe[lunchy]",
+    "recipe[virtualbox]",
+    "recipe[vagrant]",
+    "recipe[veewee]"
+  ]
+}
