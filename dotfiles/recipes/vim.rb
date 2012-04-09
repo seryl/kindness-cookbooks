@@ -20,6 +20,6 @@
 
 template "#{ENV['HOME']}/.vimrc" do
   source "vimrc.erb"
-  user ENV['USER']
+  owner ENV['USER']
   group "staff"
 end

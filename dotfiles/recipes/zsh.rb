@@ -20,6 +20,6 @@
 
 template "#{ENV['HOME']}/.zshrc" do
   source "zshrc.erb"
-  user ENV['USER']
+  owner ENV['USER']
   group "staff"
 end
