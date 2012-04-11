@@ -11,6 +11,7 @@
     "recipe[lunchy]",
     "recipe[virtualbox]",
     "recipe[vagrant]",
-    "recipe[veewee]"
+    "recipe[veewee]",
+    "recipe[emacs]"
   ]
 }
