@@ -9,9 +9,10 @@ zmodload -ap zsh/mapfile mapfile
 
 HOSTNAME="`hostname`"
 PAGER='less -R'
-EDITOR='mate -w'
-VISUAL='mate -w'
-BROWSER='fir'
+EDITOR='mate -w -l 1'
+VISUAL='mate -w -l 1'
+BROWSER='open -a /Applications/Google\ Chrome.app'
+GIT_EDITOR="mate --name 'Git Commit Message' -w -l 1"
 
 autoload colors zsh/terminfo
 if [[ "$terminfo[colors]" -ge 8 ]]; then
