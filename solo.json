@@ -1,9 +1,5 @@
 {
-  "user": {
-    "shell": "zsh"
-  },
   "run_list": [
-    "recipe[shell]",
     "recipe[dotfiles]",
     "recipe[dmg]",
     "recipe[homebrew]",
