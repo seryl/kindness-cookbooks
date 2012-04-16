@@ -19,13 +19,13 @@
 #
 
 define :emacs_module do
-  mod = params[:name]
+  mod = params[:name].to_s
   source_type = params[:type]
   source = params[:source]
   module_dir = "#{ENV['HOME']}/.emacs.d/#{ENV['USER']}"
   
   unless node['emacs']['modules'].include? mod
-    node.set['emacs']['modules'] << mod
+    node['emacs']['modules'] << mod
   end
   
   case source_type

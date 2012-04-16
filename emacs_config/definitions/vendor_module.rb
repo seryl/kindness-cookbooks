@@ -19,13 +19,13 @@
 #
 
 define :vendor_module do
-  mod = params[:name]
+  mod = params[:name].to_s
   source_type = params[:type]
   source = params[:source]
   module_dir = "#{ENV['HOME']}/.emacs.d/vendor"
   
   unless node['emacs']['vendor'].include? mod
-    node.set['emacs']['vendor'] << mod
+    node['emacs']['vendor'] << mod
   end
   
   case source_type

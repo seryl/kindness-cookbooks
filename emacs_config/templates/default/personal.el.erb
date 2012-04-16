@@ -9,13 +9,15 @@
 
 (when (file-exists-p ".passwords") (load ".passwords"))
 
-<% @emacs_modules.each do |emod| %>
+; personal modules
+<% node['emacs']['modules'].each do |emod| %>
 (load "<%= ENV['USER'] %>/<%= emod %>")
 <% end %>
 
 (when (file-exists-p "<%= ENV['USER'] %>/private")
   (load "<%= ENV['USER'] %>/private"))
 
-<% @vendor_modules.each do |vmod| %>
+; vendor modules
+<% node['emacs']['vendor'].each do |vmod| %>
 (vendor '<%= vmod %>)
 <% end %>
