@@ -7,5 +7,4 @@ version          "0.0.1"
 
 recipe           "default", "Installs all dotfiles"
 recipe           "vim", "Installs vim dotfiles"
-recipe           "emacs", "Installs emacs dotfiles"
 recipe           "zsh", "Installs zsh dotfiles"
