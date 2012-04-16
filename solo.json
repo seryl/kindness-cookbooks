@@ -9,6 +9,7 @@
     "recipe[virtualbox]",
     "recipe[vagrant]",
     "recipe[veewee]",
-    "recipe[emacs]"
+    "recipe[emacs]",
+    "recipe[emacs_config]"
   ]
 }
