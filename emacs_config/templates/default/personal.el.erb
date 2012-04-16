@@ -19,5 +19,5 @@
 
 ; vendor modules
 <% node['emacs']['vendor'].each do |vmod| %>
-(vendor '<%= vmod %>)
+(vendor '<%= vmod.gsub(".el", "") %>)
 <% end %>
