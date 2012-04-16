@@ -1,7 +1,7 @@
 #
 # Author:: Josh Toft <joshtoft@gmail.com>
 # Cookbook Name:: emacs_config
-# Recipe:: color-theme
+# Recipe:: defuns
 #
 # Copyright 2012, Josh Toft
 #
@@ -18,9 +18,7 @@
 # limitations under the License.
 #
 
-vendor_module "color-theme.el" do
-  type "file"
-  source "color-theme.el"
+emacs_module "defuns.el" do
+  type "template"
+  source "defuns.el.erb"
 end
-
-directory "#{ENV['HOME']}/.emacs.d/vendor/themes"

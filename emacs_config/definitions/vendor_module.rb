@@ -36,12 +36,12 @@ define :vendor_module do
     end
   when "file"
     cookbook_file "#{module_dir}/#{mod}" do
-      source mod
+      source source
       mode 00644
     end
   when "template"
     template "#{module_dir}/#{mod}" do
-      source mod
+      source source
       mode 00644
     end
   end

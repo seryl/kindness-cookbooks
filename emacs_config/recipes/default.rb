@@ -24,6 +24,10 @@ directory "#{ENV['HOME']}/.emacs.d"
 directory "#{ENV['HOME']}/.emacs.d/vendor"
 directory "#{ENV['HOME']}/.emacs.d/#{ENV['USER']}"
 
+# Personal
+include_recipe "emacs_config::defuns"
+
+# Vendor
 include_recipe "emacs_config::color-theme"
 include_recipe "emacs_config::gist"
 include_recipe "emacs_config::markdown-mode"
@@ -43,7 +47,7 @@ end
 
 bash "setup local.el" do
   code <<-EOH
-  echo "(load \"#{ENV['USER']}\")\n" > #{ENV['HOME']}/.emacs.d/local.el
+  echo "(load \\"#{ENV['USER']}\\")\n" > #{ENV['HOME']}/.emacs.d/local.el
   EOH
   not_if { ::File.exists?("#{ENV['HOME']}/.emacs.d/local.el") }
 end
