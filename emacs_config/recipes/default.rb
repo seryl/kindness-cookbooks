@@ -40,3 +40,10 @@ end
 template "#{ENV['HOME']}/.emacs.d/#{ENV['USER']}.el" do
   source "personal.el.erb"
 end
+
+bash "setup local.el" do
+  code <<-EOH
+  echo "(load \"#{ENV['USER']}\")\n" > #{ENV['HOME']}/.emacs.d/local.el
+  EOH
+  not_if { ::File.exists?("#{ENV['HOME']}/.emacs.d/local.el") }
+end
