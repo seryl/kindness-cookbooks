@@ -20,9 +20,9 @@
 
 include_recipe "emacs"
 
-directory "#{ENV['USER']}/.emacs.d"
-directory "#{ENV['USER']}/.emacs.d/vendor"
-directory "#{ENV['USER']}/.emacs.d/#{ENV['USER']}"
+directory "#{ENV['HOME']}/.emacs.d"
+directory "#{ENV['HOME']}/.emacs.d/vendor"
+directory "#{ENV['HOME']}/.emacs.d/#{ENV['USER']}"
 
 include_recipe "emacs_config::color-theme"
 include_recipe "emacs_config::gist"
@@ -33,10 +33,10 @@ include_recipe "emacs_config::textmate"
 include_recipe "emacs_config::twilight-emacs"
 include_recipe "emacs_config::yaml-mode"
 
-template "#{ENV['USER']}/.emacs.el" do
+template "#{ENV['HOME']}/.emacs.el" do
   source "emacs.el.erb"
 end
 
-template "#{ENV['USER']}/.emacs.d/#{ENV['USER']}.el" do
+template "#{ENV['HOME']}/.emacs.d/#{ENV['USER']}.el" do
   source "personal.el.erb"
 end
