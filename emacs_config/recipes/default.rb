@@ -27,6 +27,7 @@ directory "#{ENV['HOME']}/.emacs.d/#{ENV['USER']}"
 # Personal
 include_recipe "emacs_config::defuns"
 include_recipe "emacs_config::global"
+include_recipe "emacs_config::theme"
 
 # Vendor
 include_recipe "emacs_config::color-theme"

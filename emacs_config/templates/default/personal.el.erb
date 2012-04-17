@@ -11,7 +11,7 @@
 
 ; personal modules
 <% node['emacs']['modules'].each do |emod| %>
-(load "<%= ENV['USER'] %>/<%= emod %>")
+(load "<%= ENV['USER'] %>/<%= emod.gsub(".el", "") %>")
 <% end %>
 
 (when (file-exists-p "<%= ENV['USER'] %>/private")
