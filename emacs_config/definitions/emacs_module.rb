@@ -23,9 +23,14 @@ define :emacs_module do
   source_type = params[:type]
   source = params[:source]
   module_dir = "#{ENV['HOME']}/.emacs.d/#{ENV['USER']}"
+  unless params[:append].nil?
+    append = params[:append]
+  else
+    append = true
+  end
   
   unless node['emacs']['modules'].include? mod
-    node['emacs']['modules'] << mod
+    node['emacs']['modules'] << mod if append
   end
   
   case source_type
