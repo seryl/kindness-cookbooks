@@ -21,4 +21,5 @@
 vendor_module "twilight-emacs" do
   type "git"
   source "https://github.com/crafterm/twilight-emacs.git"
+  append false
 end
