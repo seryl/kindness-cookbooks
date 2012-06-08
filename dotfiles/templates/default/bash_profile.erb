@@ -4,5 +4,5 @@
 export PATH=/usr/local/sbin:$PATH
 export PATH=/$HOME/.cabal/bin:$PATH
 
-[[ -s "#{ENV['HOME']}/.rvm/scripts/rvm" ]] && . "#{ENV['HOME']}/.rvm/scripts/rvm" # Load rvm function
+[[ -s "<%= ENV['HOME'] %>/.rvm/scripts/rvm" ]] && . "<%= ENV['HOME'] %>/.rvm/scripts/rvm" # Load rvm function
 PATH=$PATH:$HOME/.rvm/bin # Add rvm to PATH
