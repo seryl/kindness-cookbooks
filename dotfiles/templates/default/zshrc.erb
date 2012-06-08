@@ -67,7 +67,8 @@ else
 fi
 
 export PATH=/usr/local/sbin:$PATH
+export PATH=/$HOME/.cabal/bin:$PATH
 
-[[ -s "/Users/jtoft/.rvm/scripts/rvm" ]] && . "/Users/jtoft/.rvm/scripts/rvm" # Load RVM function
+[[ -s "#{ENV['HOME']}/.rvm/scripts/rvm" ]] && . "#{ENV['HOME']}/.rvm/scripts/rvm" # Load RVM function
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.kindness/bin # Add kindness to PATH

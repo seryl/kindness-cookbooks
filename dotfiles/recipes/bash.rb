@@ -1,7 +1,7 @@
 #
 # Author:: Josh Toft <joshtoft@gmail.com>
 # Cookbook Name:: dotfiles
-# Recipe:: default
+# Recipe:: bash
 #
 # Copyright 2012, Josh Toft
 #
@@ -18,6 +18,8 @@
 # limitations under the License.
 #
 
-include_recipe "dotfiles::vim"
-include_recipe "dotfiles::bash"
-include_recipe "dotfiles::zsh"
+template "#{ENV['HOME']}/.bash_profile" do
+  source "bash_profile.erb"
+  owner ENV['USER']
+  group "staff"
+end
