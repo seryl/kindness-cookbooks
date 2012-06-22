@@ -20,10 +20,6 @@
 
 include_recipe "emacs_config::treetop"
 
-template "#{ENV['HOME']}/.emacs.d/vendor/inf-ruby.el" do
-  source "inf-ruby.el.erb"
-end
-
 template "#{ENV['HOME']}/.emacs.d/vendor/ruby-hacks.el" do
   source "ruby-hacks.el.erb"
 end

@@ -18,3 +18,6 @@
 ;; aquamacs specific
 (when (boundp 'aquamacs-version)
   (one-buffer-one-frame-mode 0))
+
+;; all modes
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
