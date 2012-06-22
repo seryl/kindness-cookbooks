@@ -20,7 +20,8 @@
 
 include_recipe "emacs_config::treetop"
 
-template "#{ENV['HOME']}/.emacs.d/#{ENV['USER']}/rinari.el" do
+emacs_module "rinari.el" do
+  type "template"
   source "rinari.el.erb"
 end
 
