@@ -58,8 +58,8 @@ This emulates Vim's `dt` behavior, which rocks."
 (defun <%= ENV['USER'] %>-ido-find-project ()
   (interactive)
   (find-file
-   (concat "~/Code/" (ido-completing-read "Project: "
-                           (directory-files "~/Code/" nil "^[^.]")))))
+   (concat "~/src/" (ido-completing-read "Project: "
+                           (directory-files "~/src/" nil "^[^.]")))))
 
 (defun <%= ENV['USER'] %>-goto-config ()
   (interactive)
