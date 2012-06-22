@@ -18,7 +18,7 @@
 # limitations under the License.
 #
 
-vendor_module "markdown-mode" do
+vendor_module "mustache-mode" do
   type "git"
   source "https://github.com/mustache/emacs.git"
 end
