@@ -36,5 +36,4 @@ end
 vendor_module "rinari" do
   type "git"
   source "https://github.com/eschulte/rinari.git"
-  append false
 end
