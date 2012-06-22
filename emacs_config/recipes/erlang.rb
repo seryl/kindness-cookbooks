@@ -1,7 +1,7 @@
 #
 # Author:: Josh Toft <joshtoft@gmail.com>
 # Cookbook Name:: emacs_config
-# Recipe:: distel
+# Recipe:: erlang
 #
 # Copyright 2012, Josh Toft
 #
@@ -18,21 +18,7 @@
 # limitations under the License.
 #
 
-include_recipe "emacs_config::erlang"
-
-vendor_module "distel.el" do
-  type "git"
-  source "https://github.com/massemanet/distel.git"
-end
-
-template "#{ENV['HOME']}/.emacs.d/distel.el/distel.el" do
-  source "distel_loader.el.erb"
-end
-
-bash "setup distel.el" do
-  code <<-EOH
-  cd #{ENV['HOME']}/.emacs.d/distel.el
-  make
-  EOH
-  not_if { ::File.exists?("#{ENV['HOME']}/.emacs.d/distel.el/ebin") }
+emacs_module "erlang.el" do
+  type "template"
+  source "erlang.el.erb"
 end
