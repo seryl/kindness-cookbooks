@@ -31,6 +31,7 @@ include_recipe "emacs_config::theme"
 
 # Vendor
 include_recipe "emacs_config::color-theme"
+include_recipe "emacs_config::dired"
 include_recipe "emacs_config::erlang"
 include_recipe "emacs_config::distel"
 # include_recipe "emacs_config::gist"
