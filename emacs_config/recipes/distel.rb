@@ -33,7 +33,6 @@ bash "setup distel.el" do
   code <<-EOH
   cd #{ENV['HOME']}/.emacs.d/vendor/distel.el
   make
-  make install
   EOH
-  not_if { ::File.exists?("/usr/local/share/distel/elisp") }
+  # not_if { ::File.exists?("#{ENV['HOME']}/.emacs.d/vendor/distel.el/elisp") }
 end
