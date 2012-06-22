@@ -29,6 +29,11 @@ emacs_module "rinari.el" do
   source "rinari.el.erb"
 end
 
+vendor_module "ruby-electric" do
+  type "git"
+  source "https://github.com/qoobaa/ruby-electric.git"
+end
+
 vendor_module "rinari" do
   type "git"
   source "https://github.com/eschulte/rinari.git"
