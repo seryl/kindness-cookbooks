@@ -18,7 +18,7 @@
 # limitations under the License.
 #
 
-template "~/.emacs.d/#{ENV['USER']}/markdown-mode.el" do
+template "#{ENV['HOME']}/.emacs.d/#{ENV['USER']}/markdown-mode.el" do
   source "markdown-mode.el.erb"
 end
 
