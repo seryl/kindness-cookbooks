@@ -18,7 +18,7 @@
 # limitations under the License.
 #
 
-vendor_module "markdown-mode" do
+vendor_module "textmate.el" do
   type "git"
   source "https://github.com/defunkt/textmate.el.git"
 end
