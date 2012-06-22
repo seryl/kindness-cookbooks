@@ -20,6 +20,10 @@
 
 include_recipe "emacs_config::treetop"
 
+template "#{ENV['HOME']}/.emacs.d/vendor/ruby-hacks.el" do
+  source "ruby-hacks.el.erb"
+end
+
 emacs_module "rinari.el" do
   type "template"
   source "rinari.el.erb"
