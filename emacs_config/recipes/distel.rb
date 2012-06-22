@@ -31,7 +31,7 @@ end
 
 bash "setup distel.el" do
   code <<-EOH
-  cd #{ENV['HOME']}/.emacs.d/distel.el
+  cd #{ENV['HOME']}/.emacs.d/vendor/distel.el
   make
   EOH
   not_if { ::File.exists?("#{ENV['HOME']}/.emacs.d/distel.el/ebin") }
