@@ -25,7 +25,7 @@ vendor_module "distel.el" do
   source "https://github.com/massemanet/distel.git"
 end
 
-template "#{ENV['HOME']}/.emacs.d/distel.el/distel.el" do
+template "#{ENV['HOME']}/.emacs.d/vendor/distel.el/distel.el" do
   source "distel_loader.el.erb"
 end
 
