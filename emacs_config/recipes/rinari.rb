@@ -1,7 +1,7 @@
 #
 # Author:: Josh Toft <joshtoft@gmail.com>
 # Cookbook Name:: emacs_config
-# Recipe:: markdown-mode
+# Recipe:: rinari
 #
 # Copyright 2012, Josh Toft
 #
@@ -18,11 +18,14 @@
 # limitations under the License.
 #
 
-template "~/.emacs.d/#{ENV['USER']}/markdown-mode.el" do
-  source "markdown-mode.el.erb"
+include_recipe "emacs_config::treetop"
+
+template "~/.emacs.d/#{ENV['USER']}/rinari.el" do
+  source "rinari.el.erb"
 end
 
-vendor_module "markdown-mode" do
+vendor_module "rinari" do
   type "git"
-  source "https://github.com/defunkt/markdown-mode.git"
+  source "https://github.com/eschulte/rinari.git"
+  append false
 end

@@ -1,7 +1,7 @@
 #
 # Author:: Josh Toft <joshtoft@gmail.com>
 # Cookbook Name:: emacs_config
-# Recipe:: markdown-mode
+# Recipe:: treetop
 #
 # Copyright 2012, Josh Toft
 #
@@ -18,11 +18,7 @@
 # limitations under the License.
 #
 
-template "~/.emacs.d/#{ENV['USER']}/markdown-mode.el" do
-  source "markdown-mode.el.erb"
-end
-
-vendor_module "markdown-mode" do
-  type "git"
-  source "https://github.com/defunkt/markdown-mode.git"
+vendor_module "treetop" do
+  type "file"
+  source "treetop.el"
 end

@@ -1,7 +1,7 @@
 #
 # Author:: Josh Toft <joshtoft@gmail.com>
 # Cookbook Name:: emacs_config
-# Recipe:: markdown-mode
+# Recipe:: color-theme
 #
 # Copyright 2012, Josh Toft
 #
@@ -18,11 +18,7 @@
 # limitations under the License.
 #
 
-template "~/.emacs.d/#{ENV['USER']}/markdown-mode.el" do
-  source "markdown-mode.el.erb"
-end
-
-vendor_module "markdown-mode" do
+vendor_module "distel.el" do
   type "git"
-  source "https://github.com/defunkt/markdown-mode.git"
+  source "https://github.com/massemanet/distel.git"
 end
