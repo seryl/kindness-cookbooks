@@ -31,6 +31,7 @@ include_recipe "emacs_config::theme"
 
 # Vendor
 include_recipe "emacs_config::color-theme"
+include_recipe "emacs_config::distel"
 # include_recipe "emacs_config::gist"
 include_recipe "emacs_config::markdown-mode"
 # include_recipe "emacs_config::mustache-mode"
