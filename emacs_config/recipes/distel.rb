@@ -34,5 +34,5 @@ bash "setup distel.el" do
   cd #{ENV['HOME']}/.emacs.d/vendor/distel.el
   make
   EOH
-  # not_if { ::File.exists?("#{ENV['HOME']}/.emacs.d/vendor/distel.el/elisp") }
+  not_if { ::File.exists?("#{ENV['HOME']}/.emacs.d/vendor/distel.el/ebin") }
 end
