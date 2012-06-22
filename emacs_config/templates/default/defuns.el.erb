@@ -38,14 +38,14 @@ This emulates Vim's `dt` behavior, which rocks."
   (interactive)
   (shell-command-on-region (point-min) (point-max) "wc -w"))
 
-; (defun <%= ENV['USER'] %>-ido-find-config ()
-;   (interactive)
-;   (find-file
-;    (concat "~/.emacs.d/<%= ENV['USER'] %>/"
-;            (ido-completing-read "Config file: "
-;                                 (directory-files "~/.emacs.d/<%= ENV['USER'] %>/"
-;                                                  nil
-;                                                  "^[^.]")))))
+(defun <%= ENV['USER'] %>-ido-find-config ()
+  (interactive)
+  (find-file
+   (concat "~/.emacs.d/<%= ENV['USER'] %>/"
+           (ido-completing-read "Config file: "
+                                (directory-files "~/.emacs.d/<%= ENV['USER'] %>/"
+                                                 nil
+                                                 "^[^.]")))))
 
 (defun <%= ENV['USER'] %>-delete-till-end-of-buffer ()
   "Deletes all text from mark until `end-of-buffer'."
@@ -55,11 +55,11 @@ This emulates Vim's `dt` behavior, which rocks."
       (end-of-buffer)
       (delete-region beg (point)))))
 
-; (defun <%= ENV['USER'] %>-ido-find-project ()
-;   (interactive)
-;   (find-file
-;    (concat "~/src/" (ido-completing-read "Project: "
-;                            (directory-files "~/src/" nil "^[^.]")))))
+(defun <%= ENV['USER'] %>-ido-find-project ()
+  (interactive)
+  (find-file
+   (concat "~/src/" (ido-completing-read "Project: "
+                           (directory-files "~/src/" nil "^[^.]")))))
 
 (defun <%= ENV['USER'] %>-goto-config ()
   (interactive)
