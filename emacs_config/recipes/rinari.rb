@@ -39,3 +39,12 @@ vendor_module "rinari" do
   source "https://github.com/eschulte/rinari.git"
   append false
 end
+
+bash "setup rinari" do
+  code <<-EOH
+  cd #{ENV['HOME']}/.emacs.d/vendor/rinari
+  git submodule init
+  git submodule update
+  EOH
+  not_if { ::File.exists?("#{ENV['HOME']}/.emacs.d/vendor/rinari/util/inf-ruby/inf-ruby.el") }
+end
