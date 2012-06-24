@@ -24,9 +24,9 @@ template "#{ENV['HOME']}/.emacs.d/vendor/ruby-hacks.el" do
   source "ruby-hacks.el.erb"
 end
 
-emacs_module "rinari.el" do
+emacs_module "ruby.el" do
   type "template"
-  source "rinari.el.erb"
+  source "ruby.el.erb"
 end
 
 vendor_module "ruby-electric" do
@@ -37,4 +37,5 @@ end
 vendor_module "rinari" do
   type "git"
   source "https://github.com/eschulte/rinari.git"
+  append false
 end
