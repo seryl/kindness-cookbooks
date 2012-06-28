@@ -1,7 +1,7 @@
 #
 # Author:: Josh Toft <joshtoft@gmail.com>
 # Cookbook Name:: emacs_config
-# Recipe:: rinari
+# Recipe:: python
 #
 # Copyright 2012, Josh Toft
 #
@@ -18,33 +18,7 @@
 # limitations under the License.
 #
 
-include_recipe "emacs_config::treetop"
-
-template "#{ENV['HOME']}/.emacs.d/vendor/ruby-hacks.el" do
-  source "ruby-hacks.el.erb"
-end
-
-emacs_module "ruby.el" do
+emacs_module "python" do
   type "template"
-  source "ruby.el.erb"
-end
-
-vendor_module "ruby-electric" do
-  type "git"
-  source "https://github.com/qoobaa/ruby-electric.git"
-end
-
-vendor_module "rinari" do
-  type "git"
-  source "https://github.com/eschulte/rinari.git"
-  append false
-end
-
-bash "setup rinari" do
-  code <<-EOH
-  cd #{ENV['HOME']}/.emacs.d/vendor/rinari
-  git submodule init
-  git submodule update
-  EOH
-  not_if { ::File.exists?("#{ENV['HOME']}/.emacs.d/vendor/rinari/util/inf-ruby/inf-ruby.el") }
+  source "python.el.erb"
 end
