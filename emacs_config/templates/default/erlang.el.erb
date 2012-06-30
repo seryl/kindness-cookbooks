@@ -21,6 +21,7 @@
                              (untabify (point-min) (point-max))
                              (delete-trailing-whitespace))))
              (set (make-local-variable 'tab-width) 2)
+             (set (make-local-variable 'erlang-indent-level) 2)
              (set (make-local-variable 'indent-tabs-mode) 'nil)))
 
 (defun erlang-reindent-then-newline-and-indent ()
