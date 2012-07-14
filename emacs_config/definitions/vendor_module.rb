@@ -38,6 +38,7 @@ define :vendor_module do
     git "#{module_dir}/#{mod}" do
       repository source
       action :sync
+      revision params[:revision]
     end
   when "file"
     cookbook_file "#{module_dir}/#{mod}" do
