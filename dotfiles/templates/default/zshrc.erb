@@ -69,7 +69,8 @@ fi
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/$HOME/.cabal/bin:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
 
-[[ -s "<%= ENV['HOME'] %>/.rvm/scripts/rvm" ]] && . "<%= ENV['HOME']%>/.rvm/scripts/rvm" # Load RVM function
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.kindness/bin # Add kindness to PATH
