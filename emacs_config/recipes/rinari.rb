@@ -33,7 +33,7 @@ vendor_module "rinari" do
   type "git"
   source "https://github.com/eschulte/rinari.git"
   append false
-  revision "7c036c2040fa07772edfe9cab52fe16a57c87492"
+  revision "7590cf8ec5ebbad743356b218471e101a5db80c5"
 end
 
 bash "setup rinari" do
