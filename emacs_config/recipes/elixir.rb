@@ -21,6 +21,6 @@
 vendor_module "elixir" do
   type "git"
   source "https://github.com/secondplanet/elixir-mode.git"
-  append true
+  append false
   revision "47a892d4a5d535cf69ada10b130ca6ff3f82cfb1"
 end
