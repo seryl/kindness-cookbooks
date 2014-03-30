@@ -11,6 +11,8 @@
     (require 'erlang-start)
     (defvar inferior-erlang-prompt-timeout t)))
 
+(setq auto-mode-alist (cons '("\\.app.src$" . erlang-mode) auto-mode-alist))
+
 (add-hook 'erlang-mode-hook
           (lambda ()
             (define-key erlang-mode-map "\C-m"
