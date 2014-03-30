@@ -7,6 +7,7 @@
 
 (setq auto-mode-alist (cons '("\\.lua" . lua-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("rockspec" . lua-mode) auto-mode-alist))
+(setq interpreter-mode-alist (cons '("lua" . lua-mode) interpreter-mode-alist))
 
 (add-hook 'lua-mode-hook
           (lambda ()
