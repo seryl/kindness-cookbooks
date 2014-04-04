@@ -16,6 +16,9 @@
 (when (functionp 'tool-bar-mode)
   (tool-bar-mode -1))
 
+;; Configure cua for terminal
+(cua-selection-mode t)
+
 ;; aquamacs specific
 (when (boundp 'aquamacs-version)
   (one-buffer-one-frame-mode 0))
