@@ -18,9 +18,9 @@
 # limitations under the License.
 #
 
-emacs_module "lua-mode.el" do
+emacs_module "lua.el" do
   type "template"
-  source "lua-mode.el.erb"
+  source "lua.el.erb"
 end
 
 vendor_module "lua-mode" do
