@@ -18,4 +18,4 @@
                            (delete-trailing-whitespace)
                            )))
             (set (make-local-variable 'indent-tabs-mode) 'nil)
-            (set (make-local-variable 'tab-width) 2)))
+            (set (make-local-variable 'lua-indent-level) 2)))
