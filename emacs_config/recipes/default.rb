@@ -45,6 +45,7 @@ include_recipe "emacs_config::scss-mode"
 #include_recipe "emacs_config::textmate"
 include_recipe "emacs_config::rinari"
 include_recipe "emacs_config::python"
+include_recipe "emacs_config::jade"
 include_recipe "emacs_config::twilight-emacs"
 include_recipe "emacs_config::yaml-mode"
 
