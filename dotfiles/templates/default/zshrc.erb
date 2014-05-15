@@ -80,9 +80,9 @@ PATH=$PATH:$HOME/.kindness/bin # Add kindness to PATH
 
 function jq()
 {
-    if [ "$#" -eq "0" ]; then
-        /usr/local/bin/jq .
-    else
-        /usr/local/bin/jq $@
-    fi
+  if [ "$#" -eq "0" ]; then
+    /usr/local/bin/jq .
+  else
+    /usr/local/bin/jq $@
+  fi
 }
