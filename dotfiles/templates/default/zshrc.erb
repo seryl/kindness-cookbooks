@@ -77,3 +77,12 @@ export PATH=/usr/local/share/npm/bin:$PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.kindness/bin # Add kindness to PATH
+
+function jq()
+{
+    if [ "$#" -eq "0" ]; then
+        /usr/local/bin/jq .
+    else
+        /usr/local/bin/jq $@
+    fi
+}
